@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# D3js data calculation & manipulation
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a simple d3.js app built with Nuxt. It also uses shadcn for the components used in this app. This app is capable of calculating sums of n-level nested data structures, it is able to invert or skip desired values & provides a simple context menu that lets users mess with some simple UI settings & filter out negative value.
 
 ## Setup
 
@@ -38,38 +38,13 @@ yarn dev
 bun run dev
 ```
 
-## Production
+## Instructions
 
-Build the application for production:
+There are two sample data sets that are located in data.ts file. One is a 2 level nested data structure, the other one 3.
 
-```bash
-# npm
-npm run build
+All the logic is in app.vue file.
+The app waits for it to be mounted in the browser, then it begins with executing the logic. Firsly the calculation is made, and then the data is plotted in a simple d3 table.
 
-# pnpm
-pnpm run build
+The targeted data set can be changed on line 102.
 
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+The context menu opens when the user right clicks anywhere on the table header.
